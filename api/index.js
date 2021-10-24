@@ -1,7 +1,5 @@
 const app = require('express')()
 
-app.use(express.static('public'))
-
 app.get('/api', (req, res) => {
     res.end('Teste')
 });
