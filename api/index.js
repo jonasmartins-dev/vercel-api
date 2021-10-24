@@ -1,12 +1,14 @@
-const app = require('express')();
+const app = require('express')()
+
+app.use(express.static('public'))
 
 app.get('/api', (req, res) => {
-    res.end('Teste');
+    res.end('Teste')
 });
 
 app.get('/api/item/:slug', (req, res) => {
-    const { slug } = req.params;
-    res.end(slug);
+    const { slug } = req.params
+    res.end(slug)
 });
 
-module.exports = app;
+module.exports = app
